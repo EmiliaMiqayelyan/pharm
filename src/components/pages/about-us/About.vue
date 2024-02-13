@@ -52,7 +52,7 @@ export default {
   name: "AboutPage",
   components: { ActivePageTemplate},
   metaInfo: {
-    title: 'Linare Medical',
+    title: 'Pharm',
     titleTemplate: '%s | About us',
   },
   data() {

@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <router-link to="/" class="menu_item">
-      <img style="width: 100px" src="../../../assets/logos/linare-logo-blue.png" alt="Logo"/>
+      <img style="width: 100px" src="../../../assets/logos/pharm-logo.png" alt="Logo"/>
     </router-link>
     <div class="menu_items">
       <div v-for="tab in tabs" :key="tab.value">
@@ -9,8 +9,8 @@
           {{ $t('tabs.' + tab.name) }}
         </router-link>
       </div>
-      <LanguageComponent />
     </div>
+    <LanguageComponent />
     <div class="menu_burger">
       <div class="burger" @click="toggleMenu">
         <i v-if="!showMenu" class="fa-solid fa-bars"></i>
@@ -106,8 +106,8 @@ export default {
 }
 
 .menu_item {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   color: #333;

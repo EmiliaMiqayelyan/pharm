@@ -23,7 +23,7 @@ import AdminHeaderComponent from "@/components/admin/AdminHeaderComponent.vue";
 export default {
   name: 'App',
   metaInfo: {
-    title: 'Linare Medical',
+    title: 'Pharm',
     titleTemplate: null,
     htmlAttrs: {
       lang: 'en-US'

@@ -78,7 +78,7 @@ export default {
   name: "ContactPage",
   components: {ActivePageTemplate},
   metaInfo: {
-    title: 'Linare Medical',
+    title: 'Pharm',
     titleTemplate: '%s | Contacts',
   },
   data() {

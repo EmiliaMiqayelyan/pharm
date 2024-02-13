@@ -13,7 +13,7 @@
               <img
                   v-if="index === 0"
                   class="d-block img-fluid w-100"
-                  src="../../../assets/logos/bg1.png"
+                  src="../../../assets/logos/bg1.jpg"
                   style="height: 100%; object-fit: cover"
               >
               <img
@@ -134,7 +134,7 @@ export default {
   name: "LandingPage",
   components: { SingleProduct},
   metaInfo: {
-    title: 'Linare Medical',
+    title: 'Pharm',
     titleTemplate: '%s | Home',
   },
   data() {

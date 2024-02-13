@@ -64,7 +64,7 @@ export default {
   name: "Products",
   components: {CategoriesTreeSelect, ActivePageTemplate, SingleProduct},
   metaInfo: {
-    title: 'Linare Medical',
+    title: 'Pharm',
     titleTemplate: '%s | Products',
   },
   props: {

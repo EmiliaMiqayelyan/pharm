@@ -75,7 +75,7 @@ export default {
   name: "ProductPage",
   components: {ActivePageTemplate},
   metaInfo: {
-    title: 'Linare Medical',
+    title: 'Pharm',
     titleTemplate: '%s | Product',
   },
   data() {
