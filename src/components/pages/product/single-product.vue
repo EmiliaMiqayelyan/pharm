@@ -164,7 +164,7 @@ export  default {
 .product-card--footer {
   height: 125px;
   padding: 10px;
-  background-color: #3ECE6E;
+  background-color: var(--main-color);
   border-top: 0;
 }
 
@@ -203,7 +203,7 @@ export  default {
 .quick_view {
   width: 100%;
   border-radius: unset;
-  background-color: #3ECE6E;
+  background-color: var(--main-color);
   color: white;
   padding: 3% 0;
   transform: translate(0%, 0%);

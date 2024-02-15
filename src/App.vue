@@ -19,6 +19,7 @@ import BackToTopButton from "@/components/pages/backToTopButton/BackToTopButton.
 import FooterComponent from "./components/pages/footer/FooterComponent.vue";
 import HeaderComponent from "./components/pages/header/HeaderComponent.vue";
 import AdminHeaderComponent from "@/components/admin/AdminHeaderComponent.vue";
+import "./global.css"
 
 export default {
   name: 'App',

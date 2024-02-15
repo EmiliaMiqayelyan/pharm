@@ -1,8 +1,5 @@
 <template>
   <div class="product_page">
-
-    <active-page-template v-if="!admin" :page="$t('products.products')"/>
-
     <div class="product_content" :class="admin ? 'p-3' : ''">
       <div class="grid_content">
         <div class="filter_products">
@@ -55,14 +52,13 @@
 </template>
 
 <script>
-import ActivePageTemplate from "@/components/pages/active-page-template.vue";
 import ProductsService from "../../../services/ProductsService";
 import CategoriesTreeSelect from "../../categories-tree-select.vue";
 import SingleProduct from "../product/single-product.vue";
 
 export default {
   name: "Products",
-  components: {CategoriesTreeSelect, ActivePageTemplate, SingleProduct},
+  components: {CategoriesTreeSelect, SingleProduct},
   metaInfo: {
     title: 'Pharm',
     titleTemplate: '%s | Products',
@@ -189,6 +185,16 @@ export default {
 
 <style scoped>
 
+>>>.page-link{
+  color: var(--main-color) !important;
+}
+
+>>>.active > .page-link{
+  background-color: var(--main-color) !important;
+  color: white !important;
+  border-color: var(--main-color) !important;
+}
+
 .form-control{
   height: 50px;
   width: 250px;
@@ -212,7 +218,7 @@ export default {
 .search_text{
   font-size: 17px;
   font-weight: 600;
-  color: #33A95B;
+  color: var(--main-color);
 }
 
 .close-icon:hover{
@@ -255,7 +261,7 @@ export default {
 .filter_text {
   font-size: 17px;
   font-weight: 600;
-  color: #33A95B;
+  color: var(--main-color);
   margin-bottom: 0;
 }
 
@@ -268,7 +274,7 @@ export default {
 }
 
 .btn-group > .btn {
-  background-color: #33A95B !important;
+  background-color: var(--main-color) !important;
   border: none !important;
   padding: 11% 31%;
   gap: 35px;
@@ -312,7 +318,7 @@ export default {
 .products_cards_child .product-card--footer {
   height: 125px;
   padding: 10px;
-  background-color: #3ECE6E;
+  background-color: var(--main-color);
   border-top: 0;
 }
 

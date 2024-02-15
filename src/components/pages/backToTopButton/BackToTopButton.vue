@@ -35,7 +35,7 @@ export default {
   bottom: 20px;
   right: 20px;
   border: none;
-  background-color: #33A95B;
+  background-color: var(--main-color);
   height: 50px;
   width: 50px;
   z-index: 99999;

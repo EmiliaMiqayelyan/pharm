@@ -61,10 +61,10 @@ export default {
       tabs: tabs
     };
   },
+
   methods: {
     toggleMenu() {
       this.$refs.mobileHeaderRef.isMenuVisible = true
-      // this.showMenu = !this.showMenu;
     }
   }
 };
@@ -74,16 +74,6 @@ export default {
 
 .admin_mobile_header {
   display: none;
-}
-
-@media (max-width: 910px) {
-  .sideBar {
-    display: none;
-  }
-
-  .admin_mobile_header {
-    display: block;
-  }
 }
 
 .header {
@@ -119,31 +109,22 @@ export default {
 }
 
 .menu_item:hover {
-  color: #4A9DEF;
+  color: var(--main-color);
 }
 
 .burger {
   display: none;
 }
 
-.mobile_menu {
-  display: none;
-  border: 1px solid #ccc;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 330px;
-  height: 100%;
-  padding: 7%;
-  z-index: 10;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 7px 0 0 7px;
-  background-color: #F4F6F9;
-}
-
 .menu_burger {
   cursor: pointer;
   display: none;
+}
+
+@media (max-width: 910px) {
+  .admin_mobile_header {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -154,22 +135,6 @@ export default {
   .burger {
     display: block;
     margin-right: 10px;
-  }
-
-  .fa-xmark::before {
-    position: absolute;
-    z-index: 9999;
-    top: 3%;
-    width: 30px;
-    height: 30px;
-    left: 15px;
-    font-size: 20px;
-  }
-
-  .mobile_menu {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
   }
 
   .menu_burger {

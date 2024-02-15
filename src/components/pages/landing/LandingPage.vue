@@ -40,6 +40,16 @@
       </b-carousel>
     </div>
 
+    <div class="about">
+      <div class="icons_part" v-for="(item, index) in about" :key="index">
+        <i class="fa_icons" :class="['fas', item.class]"></i>
+        <div>
+          <p>{{ $t(item.text1) }}</p>
+          <p>{{ $t(item.text2) }}</p>
+        </div>
+      </div>
+    </div>
+
     <div class="products">
       <h1 class="products_heading">{{ $t('landing.products') }}</h1>
 
@@ -48,7 +58,7 @@
           <div class="products-cards">
             <div class="products-card-child">
               <div class="product-card mt-2" v-for="product in products" :key="product.id">
-                <single-product :product="product" />
+                <single-product :product="product"/>
               </div>
             </div>
           </div>
@@ -60,36 +70,26 @@
       </div>
     </div>
 
-    <div class="about">
-      <div class="icons_part" v-for="(item, index) in about" :key="index">
-        <i class="fa_icons" :class="['fas', item.class]"></i>
-        <div>
-          <p>{{ $t(item.text1) }}</p>
-          <p>{{ $t(item.text2) }}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact_us">
-      <h1 class="contact_us_heading">{{ $t('landing.welcome_support') }}</h1>
-      <p class="contact_us_text">{{ $t('landing.need_help') }}</p>
-
-      <div class="contact_us_info">
-        <i class="fa-solid fa-phone-volume"></i>
-        <div class="info_text">
-          <div class="info_text_column">
-            <div>
-              <p>{{ $t('landing.contact_us') }}</p>
-              <h2 class="info_heading">{{ $t('landing.doubts') }}</h2>
-            </div>
-            <div>
-              <p>{{ contacts.phone_1 }}</p>
-              <p>{{ contacts.phone_2 }}</p>
-            </div>
+    <div class="contact-wrapper">
+      <p class="contact-heading">{{ $t('landing.contact_us') }}</p>
+      <div class="contact-content">
+        <div class="contact-icon-text">
+          <i class="fa-solid fa-phone"></i>
+          <div class="contact-phones">
+            <span>{{ contacts.phone_1 }}</span>
           </div>
-          <router-link to="/contacts">
-            <button class="know_more">{{ $t('landing.know_more') }}</button>
-          </router-link>
+        </div>
+        <div class="contact-icon-text">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="contact-phones">
+            <span>info@linare.am</span>
+          </div>
+        </div>
+        <div class="contact-icon-text">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="contact-phones">
+            <span>Yerevan, 7/43 Nansen str.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@ const about = [
 
 export default {
   name: "LandingPage",
-  components: { SingleProduct},
+  components: {SingleProduct},
   metaInfo: {
     title: 'Pharm',
     titleTemplate: '%s | Home',
@@ -191,6 +191,39 @@ export default {
 </script>
 
 <style scoped>
+
+.contact-wrapper {
+  background-color: var(--main-color);
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-heading{
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.contact-icon-text{
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: white;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.contact-phones{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content{
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+}
+
 >>> .sr-only {
   display: none;
 }
@@ -234,7 +267,7 @@ export default {
   text-transform: uppercase;
 }
 
-.slider-text{
+.slider-text {
   font-size: 3rem;
   font-weight: 500;
   margin-bottom: 0;
@@ -266,14 +299,14 @@ export default {
 }
 
 >>> .carousel-control-prev-icon {
-  background-color: #33A95B;
+  background-color: var(--main-color);
   border-radius: 3px;
   height: 2.5rem !important;
   width: 2.5rem !important;
 }
 
 >>> .carousel-control-next-icon {
-  background-color: #33A95B;
+  background-color: var(--main-color);
   border-radius: 3px;
   height: 2.5rem !important;
   width: 2.5rem !important;
@@ -325,7 +358,7 @@ export default {
 .products-card-child .product-card--footer {
   height: 125px;
   padding: 10px;
-  background-color: #3ECE6E;
+  background-color: var(--main-color);
   border-top: 0;
 }
 
@@ -346,13 +379,13 @@ export default {
 }
 
 .products_heading {
-  color: #33A95B;
+  color: var(--main-color);
   font-size: 40px;
   padding-bottom: 2%;
 }
 
 .about {
-  background-color: #3ECE6E;
+  background-color: var(--main-color);
   padding: 2%;
   display: flex;
   flex-wrap: wrap;
@@ -372,62 +405,9 @@ export default {
   margin: 0;
 }
 
-.contact_us {
-  padding: 3%;
-  text-align: center;
-}
-
-.contact_us_heading {
-  color: #33A95B;
-  font-weight: 500;
-}
-
-.contact_us_text {
-  color: #949494;
-  font-weight: 500;
-  padding-top: 1%;
-  font-size: 20px;
-}
-
-.contact_us_info {
-  padding: 2%;
-  border: 2px solid #C7C7C7;
-  width: 35%;
-  border-radius: 15px;
-  margin: 4% auto 0;
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.info_text {
-  text-align: start;
-  color: #3F3F3F;
-}
-
-.info_text_column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  padding-bottom: 7%;
-}
 
 .info_text > div > div > p {
   margin: 0;
-}
-
-.know_more {
-  background-color: #33A95B;
-  color: #ffffff;
-  border: none;
-  padding: 0.7%;
-  border-radius: 5px;
-  font-weight: 500;
-  position: absolute;
-  margin-top: 7px;
-  width: auto;
 }
 
 .product-card {
@@ -435,18 +415,12 @@ export default {
 }
 
 .fa-phone-volume::before {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 @media only screen and (max-width: 1635px) {
   .slide-left > p {
     font-size: 35px;
-  }
-}
-
-@media only screen and (max-width: 1250px) {
-  .slide-left-block {
-    display: none;
   }
 }
 
@@ -456,47 +430,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1195px) {
-  .info_heading {
-    font-size: 22px;
-  }
-
-  .info_text_column {
-    font-size: 17px;
-  }
-}
-
-@media only screen and (max-width: 920px) {
-  .know_more {
-    width: 15%;
-    margin-top: -7px;
-  }
-
-  .contact_us_info {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
 @media only screen and (max-width: 885px) {
-  .contact_us_info {
-    padding: 2% 7%;
-    width: 100%;
-    flex-direction: unset;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .know_more {
-    width: auto;
-    padding: 1.5% 8%;
-  }
-
-  .contact_us {
-    padding: 7% 4%;
-  }
-
   .img-fluid {
     height: 550px !important;
   }
@@ -528,29 +462,13 @@ export default {
     width: 73% !important;
   }
 
-  .products_heading{
+  .products_heading {
     font-size: 25px;
-  }
-
-  .contact_us {
-    padding: 10% 4%;
-  }
-
-  .contact_us_heading {
-    font-size: 20px;
-  }
-
-  .contact_us_text {
-    display: none;
-  }
-
-  .contact_us_text {
-    font-size: 17px;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .products-card-child .product-card{
+  .products-card-child .product-card {
     width: 100%;
     object-fit: contain;
   }

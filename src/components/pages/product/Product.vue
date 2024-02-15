@@ -1,7 +1,5 @@
 <template>
   <div>
-    <active-page-template :page="$t('products.product')"/>
-
     <div class="product_container">
       <div class="product_info">
         <div>
@@ -68,12 +66,10 @@
 
 <script>
 
-import ActivePageTemplate from "../active-page-template.vue";
 import ProductsService from "../../../services/ProductsService";
 
 export default {
   name: "ProductPage",
-  components: {ActivePageTemplate},
   metaInfo: {
     title: 'Pharm',
     titleTemplate: '%s | Product',
@@ -142,7 +138,7 @@ export default {
 }
 
 .product_img_name {
-  color: #33A95B;
+  color: var(--main-color);
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10%;
@@ -150,12 +146,12 @@ export default {
 
 .product_price {
   font-size: 22px;
-  color: #33A95B;
+  color: var(--main-color);
   font-weight: 500;
 }
 
 .product_type_text {
-  color: #33A95B;
+  color: var(--main-color);
   font-weight: 500;
   font-size: 17px;
 }
@@ -191,11 +187,11 @@ export default {
 }
 
 .thumbnail.active {
-  border-color: #33A95B;
+  border-color: var(--main-color);
 }
 
 .desc_btn {
-  background-color: #33A95B;
+  background-color: var(--main-color);
   border: none;
   color: white;
   padding: 0.7% 1.6%;

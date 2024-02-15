@@ -78,7 +78,7 @@ export default {
 <style scoped>
 .footer {
   width: 100%;
-  background-color: #2B8F4C;
+  background-color: #2B6B0A;
   color: #FFFFFF;
   padding: 2% 12%;
 }
@@ -103,12 +103,13 @@ export default {
 }
 
 .contact_icons {
-  background-color: #2B8F4C;
+  background-color: var(--main-color);
   text-align: center;
   height: 50px;
   width: 50px;
   padding-top: 13px;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .contact_social_icons {

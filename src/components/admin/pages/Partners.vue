@@ -134,7 +134,7 @@ export default {
 <style scoped>
 
 .btn-primary{
-  background-color: #33A95B !important;
+  background-color:  !important;
 }
 
 .admin_testimonials_content {
@@ -142,7 +142,7 @@ export default {
 }
 
 .admin_testimonials {
-  border: 2px solid #33A95B;
+  border: 2px solid var(--main-color);
   border-radius: 7px;
   padding: 2%;
 }

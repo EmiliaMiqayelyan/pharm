@@ -1,7 +1,5 @@
 <template>
   <div>
-    <active-page-template :page="$t('about.about')"/>
-
     <div class="about_content">
       <div class="about_part">
         <div>
@@ -44,13 +42,11 @@
 
 <script>
 
-import ActivePageTemplate from "@/components/pages/active-page-template.vue";
 import TestimonialsService from "../../../services/TestimonialsService";
 import CollaboratorsService from "../../../services/CollaboratorsService";
 
 export default {
   name: "AboutPage",
-  components: { ActivePageTemplate},
   metaInfo: {
     title: 'Pharm',
     titleTemplate: '%s | About us',
@@ -118,26 +114,6 @@ export default {
 </script>
 
 <style>
-.about_content_header {
-  background-image: url("../../../assets/logos/content_header_img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 200px;
-}
-
-.about_content_header_color {
-  width: 100%;
-  height: 100%;
-  background-color: #3CC76A;
-  opacity: 0.8;
-  color: white;
-  font-size: 25px;
-  font-weight: 700;
-  text-align: center;
-  padding: 80px 4%;
-}
-
 .about_heading{
   font-size: 18px;
   margin-bottom: 45px;
@@ -179,70 +155,11 @@ export default {
   font-size: 15px;
 }
 
-.services {
-  padding: 3% 13%;
-  background-color: #F4F6F9;
-}
-
-.testimonial_img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50px;
-  object-fit: cover;
-}
-
 .testimonial_img_name {
   overflow-x: auto;
   display: flex;
   gap: 20px;
   margin-bottom: 4%;
-}
-
-.services_heading, .testimonials_partners_heading {
-  color: #2490EB;
-  font-size: 30px;
-  text-align: center;
-  font-weight: 500;
-}
-
-.about_partner_img {
-  width: 200px;
-}
-
-.about_services {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.services_content {
-  background-color: #FFFFFF;
-  padding: 3% 2%;
-  width: 22%;
-}
-
-.services_content:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
-}
-
-.service_name {
-  font-weight: 500;
-  font-size: 20px;
-  margin-top: 5%;
-}
-
-.service_desc {
-  font-size: 15px;
-  color: #5A6268;
-}
-
-.partners {
-  min-height: 165px;
-  background-color: #2490EB;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .testimonials_desc {
@@ -272,13 +189,10 @@ export default {
 }
 
 @media only screen and (max-width: 1155px) {
-  .about_content, .services {
+  .about_content {
     padding: 3% 7%;
   }
 
-  .services_content {
-    width: 26%;
-  }
 
   .check_text {
     width: 72%;
@@ -289,22 +203,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1065px) {
-  .about_partner_img {
-    width: 150px;
-  }
-}
-
 @media only screen and (max-width: 950px) {
-  .about_services {
-    flex-wrap: wrap;
-    row-gap: 25px;
-  }
-
-  .services_content {
-    width: 250px;
-  }
-
   .about_part {
     flex-direction: column-reverse;
     row-gap: 25px;
@@ -329,25 +228,8 @@ export default {
 }
 
 @media only screen and (max-width: 495px) {
-  .services_heading {
-    font-size: 20px;
-  }
-
-  .about_content_heading {
+.about_content_heading {
     font-size: 25px;
-  }
-}
-
-@media only screen and (max-width: 440px) {
-  .services_content {
-    width: 285px;
-    padding-left: 15px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .about_partner_img {
-    width: 130px;
   }
 }
 
