@@ -2,7 +2,7 @@
   <header v-if="displayTabs" class="header_content" :class="{admin_header: isAdmin}">
     <div v-if="isAdmin" class="d-flex justify-content-between align-items-center">
         <div @click="navigate(tabs[0].name, tabs[0].path)">
-          <img style="width: 70px" src="../assets/logos/linare-logo-blue.png" alt="Logo"/>
+          <img style="width: 70px" src="../assets/logos/pharm-logo.png" alt="Logo"/>
         </div>
       <div class="adminMobileIcon" @click="toggleMenuList">
         <i class="fa-solid fa-bars"></i>
@@ -14,7 +14,7 @@
         <div class="admin_sideBar" :class="{ showAdminMenu: isMenuVisible }">
           <div class="sidebar_images">
             <div @click="navigate(tabs[0].name, tabs[0].path)">
-              <img src="../assets/logos/linare-logo-white.png" alt="Logo"/>
+              <img src="../assets/logos/pharm-logo.png" alt="Logo"/>
             </div>
             <div class="menu_icon">
               <i id="desktop" style="font-size: 30px" @click="toggleMenuList" class="fa-solid fa-xmark"></i>
@@ -159,7 +159,7 @@ a {
   height: 100vh;
   width: 400px;
   color: white;
-  background-color: #2490EB;
+  background-color: var(--main-color);
   transition: 0.3s ease-in-out;
 }
 
@@ -178,7 +178,7 @@ a {
 }
 
 .admin_sideBar li:hover {
-  background-color: #14457B;
+  background-color: #2B6B0A;
   border-radius: 10px;
 }
 

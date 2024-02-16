@@ -5,7 +5,14 @@
         <div>
           <div>
             <p class="about_content_heading">{{ $t('about.who_we_are') }}</p>
-            <p class="about_heading">{{ $t('about.about_heading') }}</p>
+            <p class="about_heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad enim eum facere
+              incidunt quibusdam reprehenderit similique ullam vitae voluptas. Amet commodi dolorum error esse, fugit,
+              id impedit iusto laborum neque nihil provident quibusdam quidem rem rerum veritatis? Aliquid consequuntur
+              dolorem eligendi inventore neque nihil ratione reiciendis temporibus vero voluptas. A consectetur
+              consequatur dicta, dolore ducimus laborum obcaecati quaerat sequi tenetur vitae. Architecto earum fugiat
+              ipsum laudantium magnam reprehenderit velit. A assumenda at blanditiis corporis cupiditate debitis
+              deleniti dignissimos error facilis fuga fugit id impedit iusto neque non numquam odio praesentium quaerat
+              quidem, repellat sapiente sed sit sunt totam veniam, voluptas?</p>
             <p class="about_content_text">{{ $t('about.create_technology') }}</p>
           </div>
           <div style="margin-top: 4%;">
@@ -68,22 +75,6 @@ export default {
           class: "fa-check",
           text: "about.about_text3"
         },
-        {
-          class: "fa-check",
-          text: "about.about_text4"
-        },
-        {
-          class: "fa-check",
-          text: "about.about_text5"
-        },
-        {
-          class: "fa-check",
-          text: "about.about_text6"
-        },
-        {
-          class: "fa-check",
-          text: "about.about_text7"
-        },
       ]
     }
   },
@@ -114,7 +105,7 @@ export default {
 </script>
 
 <style>
-.about_heading{
+.about_heading {
   font-size: 18px;
   margin-bottom: 45px;
   width: 85%;
@@ -125,13 +116,13 @@ export default {
 }
 
 .about_content_heading {
-  color: #2490EB;
+  color: var(--main-color);
   font-size: 30px;
   font-weight: 700;
 }
 
 .about_content_text {
-  color: #2490EB;
+  color: var(--main-color);
   font-weight: 500;
 }
 
@@ -228,7 +219,7 @@ export default {
 }
 
 @media only screen and (max-width: 495px) {
-.about_content_heading {
+  .about_content_heading {
     font-size: 25px;
   }
 }

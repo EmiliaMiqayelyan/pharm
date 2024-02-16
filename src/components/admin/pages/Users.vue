@@ -259,7 +259,8 @@ export default {
 <style scoped>
 
 .btn-primary {
-  background-color: #2490EB !important;
+  background-color: var(--main-color) !important;
+  border: none;
 }
 
 .users_page_content {

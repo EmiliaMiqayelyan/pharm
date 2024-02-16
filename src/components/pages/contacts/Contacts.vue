@@ -14,81 +14,22 @@
       </iframe>
     </div>
     <div class="contact_content">
-      <!--      <div class="contact_part">-->
-      <!--        <div class="contact_info">-->
-      <!--          <div class="contact_content_icon">-->
-      <!--            <div class="contact_form_icon">-->
-      <!--              <i class="fa-solid fa-phone"></i>-->
-      <!--            </div>-->
-      <!--            <div>-->
-      <!--              <p class="contact_content_heading">{{ $t('contacts.phone') }}</p>-->
-      <!--              <p class="contact_content_text">{{ this.contacts.phone_1 }}</p>-->
-      <!--              <p class="contact_content_text">{{ this.contacts.phone_2 }}</p>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--          <div class="contact_content_icon">-->
-      <!--            <div class="contact_form_icon">-->
-      <!--              <i class="fa-solid fa-envelope"></i>-->
-      <!--            </div>-->
-      <!--            <div>-->
-      <!--              <p class="contact_content_heading">{{ $t('contacts.email') }}</p>-->
-      <!--              <p class="contact_content_text">{{ this.contacts.email }}</p>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--          <div class="contact_content_icon">-->
-      <!--            <div class="contact_form_icon">-->
-      <!--              <i class="fa-solid fa-paper-plane"></i>-->
-      <!--            </div>-->
-      <!--            <div>-->
-      <!--              <p class="contact_content_heading">{{ $t('contacts.address') }}</p>-->
-      <!--              <p class="contact_content_text">{{ this.contacts.address }}</p>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--        </div>-->
-
-<!--              <div class="contact_form">-->
-<!--                <p class="contact_form_heading">{{ $t('contacts.contacts') }}</p>-->
-<!--                <div class="forms">-->
-<!--                  <input v-model="customerMessage.name" type="text" class="contact_form_inputs"-->
-<!--                         :placeholder="$t('contacts.name')"/>-->
-<!--                  <input v-model="customerMessage.email" type="email" class="contact_form_inputs"-->
-<!--                         :placeholder="$t('contacts.email')"-->
-<!--                         required/>-->
-<!--                  <input v-model="customerMessage.phone" type="text" class="contact_form_inputs"-->
-<!--                         :placeholder="$t('contacts.phone')"/>-->
-<!--                  <textarea v-model="customerMessage.comment" style="height: 280px" class="contact_form_inputs"-->
-<!--                            :placeholder="$t('contacts.comment')" required/>-->
-<!--                </div>-->
-<!--                <div class="contact_btn">-->
-<!--                  <button class="contact_send_btn" @click="onClickSendEmail">{{ $t('contacts.send') }}</button>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div style="margin: 0 auto; width: 92%" class="mt-5">-->
-<!--              <iframe-->
-<!--                  id="map-canvas"-->
-<!--                  class="map_part"-->
-<!--                  width="100%"-->
-<!--                  height="500"-->
-<!--                  frameborder="0"-->
-<!--                  scrolling="no"-->
-<!--                  marginheight="0"-->
-<!--                  marginwidth="0"-->
-<!--                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Yerevan%207/43%20Nansen+(My%20Business%20Name)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">-->
-<!--              </iframe>-->
-      <!--      </div>-->
       <div class="contact-form-section">
         <div class="contact_form">
           <p class="contact_form_heading">{{ $t('contacts.contacts') }}</p>
           <div class="forms">
-            <input v-model="customerMessage.name" type="text" class="contact_form_inputs"
-                   :placeholder="$t('contacts.name')"/>
-            <input v-model="customerMessage.email" type="email" class="contact_form_inputs"
-                   :placeholder="$t('contacts.email')"
-                   required/>
-            <input v-model="customerMessage.phone" type="text" class="contact_form_inputs"
-                   :placeholder="$t('contacts.phone')"/>
-            <textarea v-model="customerMessage.comment" style="height: 280px" class="contact_form_inputs"
+            <div>
+              <input v-model="customerMessage.name" type="text" class="contact_form_inputs"
+                     :placeholder="$t('contacts.name')"/>
+            </div>
+            <div class="d-flex gap-3">
+              <input v-model="customerMessage.email" type="email" class="contact_form_inputs"
+                     :placeholder="$t('contacts.email')"
+                     required/>
+              <input v-model="customerMessage.phone" type="text" class="contact_form_inputs"
+                     :placeholder="$t('contacts.phone')"/>
+            </div>
+            <textarea v-model="customerMessage.comment" class="contact_form_inputs"
                       :placeholder="$t('contacts.comment')" required/>
           </div>
           <div class="contact_btn">
@@ -158,24 +99,16 @@ export default {
 
 <style scoped>
 
-.contact_content{
+.contact_content {
   margin-top: 100px;
 }
 
-.contact-form-section{
+.contact-form-section {
   padding: 20px;
   background-color: white;
-  width: auto;
-  height: 400px;
+  width: 45%;
   margin-top: -120px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.contact_part {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 2%;
 }
 
 .contact_content {
@@ -183,56 +116,18 @@ export default {
   background-color: var(--main-color);
 }
 
-.contact_form_icon {
-  background-color: #2490EB;
-  padding: 15px 3% 3%;
-  text-align: center;
-  width: 60px;
-  border-radius: 5px;
-  height: 60px;
-  font-size: 23px;
-  color: white;
-}
-
-.contact_content_icon {
-  border: 1px solid #9EA2AF;
-  padding: 13% 8%;
-  border-radius: 7px;
-  display: flex;
-  gap: 35px;
-  align-items: center;
-}
-
-.contact_content_heading {
-  color: #2490EB;
-  font-weight: 700;
-  font-size: 23px;
-}
-
-.contact_content_text {
-  color: #9EA2AF;
-  font-weight: 600;
-  margin: 0 0 5px;
-}
-
-.contact_info {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 30%;
-}
-
 .contact_form_heading {
-  color: #2490EB;
+  color: var(--main-color);
   font-size: 35px;
   font-weight: 600;
 }
 
 .contact_form_inputs {
-  border-radius: 5px;
   padding: 2%;
-  width: 40%;
-  border: 2px solid #9EA2AF
+  width: 100%;
+  background-color: #EDF1FC;
+  border-radius: 3px 3px 3px 3px;
+  border: none;
 }
 
 .forms {
@@ -242,7 +137,7 @@ export default {
 }
 
 .contact_send_btn {
-  background-color: #2490EB;
+  background-color: var(--main-color);
   border: none;
   color: white;
   padding: 1.5% 13%;
@@ -257,7 +152,7 @@ export default {
 }
 
 .contact_form {
-  width: 60%;
+  width: 100%;
 }
 
 .contact_btn {
@@ -272,38 +167,12 @@ export default {
 }
 
 @media only screen and (max-width: 1390px) {
-  .contact_info {
-    width: 35%;
-  }
-
-  .contact_content {
+.contact_content {
     padding: 4% 4%;
-  }
-
-  .contact_content_icon {
-    padding: 13% 4%;
-    gap: 20px;
   }
 }
 
 @media only screen and (max-width: 990px) {
-  .contact_part {
-    flex-direction: column;
-  }
-
-  .contact_info {
-    width: 100%;
-  }
-
-  .contact_content_icon {
-    padding: 4% 4%;
-    gap: 35px;
-  }
-
-  .contact_form_icon {
-    padding: 13px 2% 2%;
-  }
-
   .contact_form {
     width: 100%;
   }

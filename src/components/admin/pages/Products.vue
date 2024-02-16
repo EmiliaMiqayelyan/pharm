@@ -262,7 +262,8 @@ export default {
 <style>
 
 .btn-primary{
-  background-color: #2490EB !important;
+  background-color: var(--main-color) !important;
+  border: none;
 }
 
 @media (max-width: 910px) {

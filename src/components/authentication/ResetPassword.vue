@@ -270,6 +270,11 @@ export default {
   max-width: 30% !important;
 }
 
+.btn-primary{
+  background-color: var(--main-color) !important;
+  border: none !important;
+}
+
 @media (max-width: 1060px) {
   .reset_pass_content{
     max-width: 60% !important;

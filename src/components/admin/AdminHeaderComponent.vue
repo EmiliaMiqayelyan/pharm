@@ -6,7 +6,7 @@
       <div  v-if="getCurrentUser && displayTabs" class="sidebar_hide">
         <div class="sideBar" :class="{ showMenu: isMenuVisible, widthChange: isMenuVisible }">
         <div class="sidebar_images">
-          <img class="sidebar_img" src="@/assets/logos/linare-logo-white.png" @click="navigate('home', '/')" alt="Logo"/>
+          <img class="sidebar_img" src="@/assets/logos/pharm-logo.png" @click="navigate('home', '/')" alt="Logo"/>
           <div class="menu_icon">
             <i id="desktop" @click="toggleMenuList" class="fa-solid fa-bars"></i>
           </div>
@@ -178,7 +178,7 @@ a {
   z-index: 20;
   width: 400px;
   color: white;
-  background-color: #2490EB;
+  background-color:var(--main-color);
   transition: 0.3s ease-in-out;
   overflow-y: scroll;
 }
@@ -203,7 +203,7 @@ a {
 }
 
 .sideBar li:hover {
-  background-color: #14457B;
+  background-color: #2B6B0A;
   border-radius: 10px;
 }
 

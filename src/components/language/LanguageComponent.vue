@@ -116,7 +116,7 @@ export default {
 
 .text_flag:hover {
   background-color: #f4fbf8;
-  color: #2490EB;
+  color: var(--main-color);
   border: none;
 }
 
@@ -149,7 +149,7 @@ export default {
   }
 
   .vue-select .selected-option{
-    color: #2490EB;
+    color: var(--main-color);
   }
 
   .dropdown-options.selected .dropdown-options--cell, .lang_flags{

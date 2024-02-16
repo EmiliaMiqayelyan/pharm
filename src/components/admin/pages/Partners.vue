@@ -134,7 +134,8 @@ export default {
 <style scoped>
 
 .btn-primary{
-  background-color:  !important;
+  background-color: var(--main-color) !important;
+  border: none;
 }
 
 .admin_testimonials_content {

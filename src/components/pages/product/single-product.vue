@@ -125,7 +125,7 @@ export  default {
   height: 30px;
   padding-bottom: 3px;
   border: none;
-  background-color: #2490EB !important;
+  background-color: var(--main-color) !important;
   color: white;
   border-radius: 3px;
   cursor: pointer;
@@ -169,7 +169,7 @@ export  default {
 }
 
 .full_details_btn{
-  background: #2490EB;
+  background: var(--main-color);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -238,7 +238,7 @@ export  default {
 }
 
 .modal_img_name {
-  color: #2490EB;
+  color: var(--main-color);
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10%;
@@ -246,7 +246,7 @@ export  default {
 
 .modal_price {
   font-size: 22px;
-  color: #2490EB;
+  color: var(--main-color);
   font-weight: 500;
 }
 
@@ -257,7 +257,7 @@ export  default {
 }
 
 .types {
-  color: #2490EB;
+  color: var(--main-color);
   font-weight: 500;
   font-size: 17px;
 }

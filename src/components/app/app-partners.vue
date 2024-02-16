@@ -48,7 +48,7 @@ export default {
 }
 
 .partners-block {
-  background-color: #14457B;
+  background-color: #2B6B0A;
   padding: 10px 20px
 
 }

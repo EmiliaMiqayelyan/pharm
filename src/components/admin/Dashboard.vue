@@ -122,7 +122,7 @@ export default {
 }
 
 .dashboard_img {
-  background-color: #2490EB;
+  background-color: var(--main-color);
   width: 70px;
   height: 70px;
   border-radius: 5px;

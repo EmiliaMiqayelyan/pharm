@@ -14,9 +14,6 @@ export default {
 
 <style>
 .products_content_header {
-  background-image: url("../../assets/logos/content_header_img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 255px;
 }
@@ -24,7 +21,6 @@ export default {
 .products_content_header_color {
   width: 100%;
   height: 100%;
-  background-color: #3CC76A;
   opacity: 0.8;
   color: white;
   font-size: 25px;
