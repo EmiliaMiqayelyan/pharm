@@ -48,14 +48,16 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
             >
-
             </iframe>
           </div>
         </div>
 
       </div>
       <div style="margin-top: 5%">
-        <button class="desc_btn">{{ $t('products.description') }}</button>
+        <div style="display: flex; gap: 10px">
+          <button class="desc_btn">{{ $t('products.description') }}</button>
+          <OrderModal />
+        </div>
           <div v-if="locale === 'en'" class="mt-2" v-html="product.description"></div>
           <div v-if="locale === 'ru'" class="mt-2" v-html="product.description_ru"></div>
           <div v-if="locale === 'am'" class="mt-2" v-html="product.description_am"></div>
@@ -67,9 +69,11 @@
 <script>
 
 import ProductsService from "../../../services/ProductsService";
+import OrderModal from "@/components/pages/product/OrderModal.vue";
 
 export default {
   name: "ProductPage",
+  components: {OrderModal},
   metaInfo: {
     title: 'Pharm',
     titleTemplate: '%s | Product',
