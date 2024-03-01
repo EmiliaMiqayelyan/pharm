@@ -2,16 +2,6 @@
   <div class="product_page">
     <div class="product_content" :class="admin ? 'p-3' : ''">
       <div class="grid_content">
-        <div class="filter_products">
-          <div class="filter_category_text">
-            <p class="filter_text">
-              {{ $t('products.filter_category') }}
-            </p>
-            <div>
-              <categories-tree-select @onChangeValue="onChangeCategory"/>
-            </div>
-          </div>
-        </div>
         <div class="grid_part">
           <span class="search_text">{{ $t('products.search_heading') }}</span>
           <div>
@@ -22,7 +12,18 @@
       </div>
 
       <div class="product_cards" :class="currentGridClass">
-        <div class="products_cards_child"  >
+        <div class="filter_products">
+          <div class="filter_category_text">
+            <p class="filter_text">
+              {{ $t('products.filter_category') }}
+            </p>
+            <div>
+              <categories-tree-select @onChangeValue="onChangeCategory"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="products_cards_child">
           <div class="product-card mt-2" v-for="product in products" :key="product.id">
             <single-product
                 :product="product"
@@ -38,7 +39,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="d-flex  mt-5 justify-content-center">
       <b-pagination
@@ -242,20 +242,13 @@ export default {
 }
 
 .product_content {
-  padding: 3% 13%;
+  padding: 3% 2%;
 }
 
 .grid_content {
-  background-color: #E9E9E9;
+  border: 2px solid var(--main-color);
   padding: 1%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 20px;
-}
-
-.filter_products {
-  width: 450px;
+  border-radius: 3px;
 }
 
 .filter_text {
@@ -270,6 +263,7 @@ export default {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -285,13 +279,14 @@ export default {
 
 .filter_category_text {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
 .products_cards_child {
+  width: 83%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   transition: transform 150ms ease-out;
   transform: translatex(0px);
@@ -358,10 +353,16 @@ export default {
 .product_cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   row-gap: 20px;
-  margin-top: 6%;
+  margin-top: 3%;
   text-align: center;
+}
+
+@media only screen and (max-width: 1840px) {
+  .products_cards_child{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1245px) {
@@ -388,10 +389,9 @@ export default {
   }
 }
 
-
-@media (max-width: 367px) {
-  .form-control{
-    width: 220px;
+@media (max-width: 420px) {
+  .vue-treeselect{
+    width: 97% !important;
   }
 }
 </style>

@@ -4,13 +4,18 @@
       <img style="width: 100px" src="../../../assets/logos/pharm-logo.png" alt="Logo"/>
     </router-link>
     <div class="menu_items">
-      <div v-for="tab in tabs" :key="tab.value">
-        <router-link :to="tab.path" class="menu_item">
-          {{ $t('tabs.' + tab.name) }}
-        </router-link>
+      <div class="menu_tabs">
+        <div>
+          <div v-for="tab in tabs" :key="tab.value">
+            <router-link :to="tab.path" class="menu_item">
+              {{ $t('tabs.' + tab.name) }}
+            </router-link>
+          </div>
+        </div>
+        <LanguageComponent />
       </div>
     </div>
-    <LanguageComponent />
+
     <div class="menu_burger">
       <div class="burger" @click="toggleMenu">
         <i v-if="!showMenu" class="fa-solid fa-bars"></i>
@@ -53,6 +58,7 @@ const tabs = [
     name: 'contacts'
   }
 ]
+
 export default {
   components: {LanguageComponent, MobileHeader},
   data() {
@@ -93,6 +99,8 @@ export default {
   display: flex;
   gap: 30px;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .menu_item {
@@ -102,6 +110,14 @@ export default {
   text-decoration: none;
   color: #333;
   transition: color 0.3s ease;
+}
+
+.menu_tabs{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 63%;
+  justify-content: space-between;
 }
 
 .fa-bars::before {

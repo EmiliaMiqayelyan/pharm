@@ -280,10 +280,37 @@ export default {
   font-size: 25px;
 }
 
+@media only screen and (max-width: 1300px) {
+  .landing_content_text{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .landing_content_text{
+    width: 60%;
+  }
+
+  .landing_content{
+    height: 400px;
+  }
+}
+
 @media only screen and (max-width: 655px) {
   .slide-left > p {
     font-size: 25px;
     margin-top: 8%;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .landing_content_text{
+    width: 95%;
+    font-size: 30px;
+  }
+
+  .landing_content{
+    height: 220px;
   }
 }
 
@@ -302,6 +329,16 @@ export default {
   .products-card-child .product-card {
     width: 100%;
     object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .landing_content_text{
+    font-size: 25px;
+  }
+
+  .landing_content{
+    height: 180px;
   }
 }
 </style>
